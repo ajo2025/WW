@@ -10,8 +10,10 @@
     <div class="container">
         <h1>Subir Imágenes a Supabase</h1>
         <form id="upload-form">
-            <label for="image-input">Selecciona una imagen:</label>
-            <input type="file" id="image-input" accept="image/*" required>
+            <label for="image-input" class="custom-file-label">
+                <span class="icon">📷</span> Selecciona o toma una foto
+            </label>
+            <input type="file" id="image-input" accept="image/*" capture="environment" required>
             <button type="submit">Subir Imagen</button>
         </form>
         <div id="status"></div>
@@ -19,9 +21,7 @@
         <div id="image-gallery" class="gallery"></div>
     </div>
 
-    <!-- Incluye la librería de Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-    <!-- Incluye tu script de JavaScript -->
     <script type="module" src="app.js"></script>
 </body>
 </html>
